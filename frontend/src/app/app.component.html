@@ -1,0 +1,25 @@
+<main class="main">
+  <div class="content">
+    <div style="width: 200px; background: #181818; border: 1px solid #2b2b2b; display: flex; align-items: center; flex-direction: column;">
+      
+      <div style="height: 200px;"><H1 style="color: white;">Resumos</H1></div>
+      <div style="border: 1px dashed white; width: 100%; display:flex; flex-direction: column; align-items: center; padding: 10px;">
+        <strong style="color: white;">Insira o resumo que deseja carregar:</strong>
+        <input type="text" [(ngModel)]="fileName"/>
+        <button (click)="loadGraph('ALL_WORDS')">Todas palavras</button>
+        <button (click)="loadGraph('TOP_10')">Top 10 palavras</button>
+        <button (click)="loadGraph('TOP_3')">Top 3 palavras</button>
+      </div>
+      <div style="margin-top: 20px; border: 1px dashed white; width: 100%; display:flex; flex-direction: column; align-items: center; padding: 10px;">
+        <strong style="color: white;">Coautoria</strong>
+        <button (click)="loadGraph('COAUTORIA')">Gerar grafo</button>
+      </div>
+    </div>
+    <div style="flex: 1;">
+      <svg #mysvg width="100%" height="100vh" style="max-width: 100%; height: auto; background: #1f1f1f">
+      </svg>
+    </div>
+  </div>
+</main>
+
+<router-outlet></router-outlet>
