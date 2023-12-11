@@ -12,7 +12,6 @@
 - Executar o projeto Angular frontend com o comando npm start na pasta ./frontend
 
 ## Aplicação live para teste:
-Para carregar um resumo escreva o nome do arquivo .txt assim como foi disponibilizado, exemplo: arq_1.txt, arq_2.txt, arq_50.txt, etc..
 https://visualizador-de-textos.onrender.com/
 
 ## Análise assintótica
