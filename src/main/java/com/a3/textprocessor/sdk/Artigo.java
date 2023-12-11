@@ -11,6 +11,7 @@ import java.util.List;
  * @author lhenr
  */
 public class Artigo {
+    private String fileName;
     private String titulo;
     private String resumo;
     private String tags;
@@ -18,7 +19,8 @@ public class Artigo {
     private String[] frases;
     private List<Frase> frasesFiltradas;
 
-    public Artigo(String titulo, String resumo, String tags) {
+    public Artigo(String titulo, String resumo, String tags, String fileName) {
+        this.fileName = fileName;
         this.titulo = titulo;
         this.resumo = resumo;
         this.tags = tags;
@@ -74,5 +76,13 @@ public class Artigo {
 
     public void quebrarFrases() {
         this.frases = this.resumo.split("(\\. |\\.\\n|\\.\\r\\n)");
+    }
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
     }
 }

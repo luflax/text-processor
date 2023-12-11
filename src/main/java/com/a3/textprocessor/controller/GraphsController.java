@@ -32,4 +32,14 @@ public class GraphsController {
     public GrafoResponse coautoria() {
         return this.grafoService.generateCoautoriaGraph();
     }
+
+    @GetMapping("similaridadeTextos")
+    public GrafoResponse similaridadeTextos() {
+        return this.grafoService.generateSimilaridadeTextosGraph();
+    }
+
+    @GetMapping("list")
+    public String[] list() {
+        return this.grafoService.listFiles();
+    }
 }
